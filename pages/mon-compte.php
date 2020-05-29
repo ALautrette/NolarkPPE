@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <?php
-include('../includes/debut_page.php')
+include('../includes/debut_page.php');
+//Si l'utlisateur n'est pas connecté, je le renvoie vers la page de connexion
+if (!isset($_SESSION['pseudo'])) {
+    header('Location: http://nolarkprof/pages/connexion.php');
+}
 ?>
 
 <html lang="fr-FR">
@@ -17,18 +21,15 @@ include('../includes/debut_page.php')
         <?php
         include('../includes/header.html.inc.php');
         echo '<p> Bienvenue ' . $_SESSION['pseudo'] . '</p>';
-        if((int)$_SESSION['niveau']===4){
+        //Affiche un message personnalisé suivant le statut de l'utilisateur 
+        if ((int) $_SESSION['niveau'] === 4) {
             echo '<p>Ah un administrateur !</p>';
-        }
-        else if((int)$_SESSION['niveau']===3){
+        } else if ((int) $_SESSION['niveau'] === 3) {
             echo '<p>Oh non, un relou de modo...</p>';
-        }
-        else if((int)$_SESSION['niveau']===2){
+        } else if ((int) $_SESSION['niveau'] === 2) {
             echo '<p>Tient! Un client, bonne navigation sur le site de Nolark !</p>';
         }
-        ?>       
-        <a href="./deconnexion.php"><img src="../images/btn_deco.png" alt="Bouton de déconnexion"></a>
-        <?php
+        echo "<a href='./deconnexion.php'><img src='../images/btn_deco.png' alt='Bouton de déconnexion'></a>";
         include('../includes/footer.inc.php');
         ?>
     </body>

@@ -16,6 +16,11 @@ include('../includes/debut_page.php')
     <body>
         <?php
         include('../includes/header.html.inc.php');
+        
+        if(empty($_SESSION['panier'])){
+            echo "<p>Votre panier est vide</p>";
+        }
+        
         include('../includes/footer.inc.php');
         ?>
     </body>

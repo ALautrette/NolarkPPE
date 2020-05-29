@@ -48,21 +48,23 @@ $pages = array(
             foreach ($pages as $nom => $url) {
                 echo "\n", '<li><a href="', $url, '">', $nom, '</a></li>';
             }
-            //Test si l'utlisateur est connecté
-            if (isset($_SESSION['pseudo'])) {
-                //Si il est connecté, ajoute un lien vers sa page personnelle
-                //Que l'on retrouve dans la barre de navigation dénommé par son pseudo
-                echo "\n", '<li><a href="', $dirPages . 'mon-compte.php', '">', $_SESSION['pseudo'], '</a></li>';
-                //Ajout également d'un lien vers le panier du client
+                //Ajout d'un lien vers le panier du client
                 //Affiche le nombre d'articles dans le panier
                 if (empty($_SESSION['panier'])) {
                     echo "\n", '<li><a href="', $dirPages . 'panier.php', '">', 'Mon Panier', '</a></li>';
                 } else {
                     echo "\n", '<li><a href="', $dirPages . 'panier.php', '">', 'Mon Panier (', count($_SESSION['panier']), ')</a></li>';
                 }
+            //Test si l'utlisateur est connecté
+            if (isset($_SESSION['pseudo'])) {
+                //Si il est connecté, ajoute un lien vers sa page personnelle
+                //Que l'on retrouve dans la barre de navigation dénommé par son pseudo
+                echo "\n", '<li><a href="', $dirPages . 'mon-compte.php', '">', $_SESSION['pseudo'], '</a></li>';
+                
             } else {
                 echo "\n", '<li><a href="', $dirPages . 'connexion.php', '">', 'Se connecter', '</a></li>';
             }
+            
             ?>
         </ul>
     </nav>
