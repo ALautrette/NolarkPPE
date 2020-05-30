@@ -5,7 +5,8 @@
      Email : jgil83000@gmail.com
 -->
 <?php
-include('../includes/debut_page.php')
+include('../includes/debut_page.php');
+include('../includes/interception_ajout_panier.inc.php');
 ?>
 <html lang="fr-FR">
     <head>

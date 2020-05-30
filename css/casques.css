@@ -7,11 +7,21 @@
 
 #casques article {
     width: 163px; /* Largeur de l'article */
-    height: 275px; /* Hauteur de l'article */
+    height: 310px; /* Hauteur de l'article */
     margin: 10px; /* Marges extérieures */
     padding: 5px; /* Marges intérieures */
     border: white thin solid; /* Bordure blanche */
     position: relative; /* Position relative */
+}
+button{
+    margin-top: 7px;
+    margin-left:16px;
+    background-color: black;
+    color:white;
+    height:30px;
+    width:130px;
+    position: absolute;
+    bottom: 25px;
 }
 
 #casques article img {

@@ -20,6 +20,9 @@ include('../includes/debut_page.php')
         if(empty($_SESSION['panier'])){
             echo "<p>Votre panier est vide</p>";
         }
+        else{
+            echo var_dump($_SESSION['panier']);
+        }
         
         include('../includes/footer.inc.php');
         ?>

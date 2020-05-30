@@ -6,7 +6,7 @@
 -->
 <?php
 include('../includes/debut_page.php');
-session_destroy();
+include('../includes/interception_ajout_panier.inc.php');
 ?>
 <html lang="fr-FR">
     <head>

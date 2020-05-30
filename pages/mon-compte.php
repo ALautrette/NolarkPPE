@@ -29,6 +29,9 @@ if (!isset($_SESSION['pseudo'])) {
         } else if ((int) $_SESSION['niveau'] === 2) {
             echo '<p>Tient! Un client, bonne navigation sur le site de Nolark !</p>';
         }
+        
+        //Ajoute une modif de mots de passe
+        
         echo "<a href='./deconnexion.php'><img src='../images/btn_deco.png' alt='Bouton de déconnexion'></a>";
         include('../includes/footer.inc.php');
         ?>

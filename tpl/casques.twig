@@ -15,13 +15,15 @@
             <p class="prix">{{ casque.prix }}€</p>
             <p class="marque">{{ casque.nom }}</p>
             <p class="modele">{{ casque.modele }}</p>
-
+            <form>
+                <p><button type="submit" id="idcasque" name="idcasque" value="{{ casque.id }}">Ajouter au panier</button></p>
+            </form>
             {# Si le stock est supérieur ou égal à 10 on ne s'alarme pas #}
             {% if casque.classement == 5 %}
                 <img class="classement classement0{{ casque.classement }}" src="../images/casques/etoiles.gif" alt="Classement {{ (casque.classement/10)|replace({'.': ","}) }} sur 5">
             {% else %}
                 <img class="classement classement{{ casque.classement }}" src="../images/casques/etoiles.gif" alt="Classement {{ (casque.classement/10)|replace({'.': ","}) }} sur 5">
-            {% endif %}
+            {% endif %}           
         </article>
     {% endfor %}
 </section>
