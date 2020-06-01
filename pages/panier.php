@@ -16,7 +16,7 @@ include('../includes/debut_page.php')
     <body>
         <?php
         include('../includes/header.html.inc.php');
-
+        echo'<h1 id="titre_panier">Mon panier :</h1>';
         if (empty($_SESSION['panier'])) {
             echo "<p>Votre panier est vide</p>";
         } else {
