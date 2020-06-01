@@ -20,7 +20,7 @@ if (!isset($_SESSION['pseudo'])) {
     <body>
         <?php
         include('../includes/header.html.inc.php');
-        echo '<p> Bienvenue ' . $_SESSION['pseudo'] . '</p>';
+        echo '<p> Bienvenue <span id="pseudo">' . $_SESSION['pseudo'] . '</span></p>';
         //Affiche un message personnalisé suivant le statut de l'utilisateur 
         if ((int) $_SESSION['niveau'] === 4) {
             echo '<p>Ah un administrateur !</p>';

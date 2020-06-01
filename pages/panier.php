@@ -19,8 +19,8 @@ include('../includes/debut_page.php')
         echo'<h1 id="titre_panier">Mon panier :</h1>';
         if (empty($_SESSION['panier'])) {
             echo "<p>Votre panier est vide</p>";
-        } else {
-            //echo var_dump($_SESSION['panier']);
+        } else {            
+            echo '<a class="vide" href="./vider_panier.php">Vider le panier</a>';
             echo '<section id="panier">';
             $cout = 0;
             foreach ($_SESSION['panier'] as $casque) {
@@ -48,6 +48,7 @@ include('../includes/debut_page.php')
                 }
             }
             echo'</section>';
+            echo '<a class="vide" href="./vider_panier.php">Vider le panier</a>';
             echo'<section id="total_panier">'
             . '<p id="nb_articles">Nombre d\'articles : ' . count($_SESSION['panier']) . '</p>'
             . '<p id=cout_articles>Coût total des articles : ' . $cout . '€</p>'

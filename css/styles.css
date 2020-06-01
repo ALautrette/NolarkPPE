@@ -323,11 +323,21 @@ footer a{
     white-space: nowrap; /* Pas de passage à la ligne */
     font-weight: bold; /* Texte en gras */
 }
-.modele_article {
+.modele_article{
     text-transform : capitalize; /* Toutes les premières lettres en majuscules */
 }
 
 #total_panier{
     border: red thin solid;
     margin-bottom:45px;
+}
+#pseudo{
+    text-transform : capitalize;
+    font-weight: bold;
+}
+.vide{
+    background-color: red;
+    border:black thin solid;
+    color:black;
+    margin-bottom:20px;
 }
