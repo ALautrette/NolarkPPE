@@ -302,4 +302,32 @@ footer a{
         flex-direction: row; /* Sur tablette, on met les casques de la page d'accueil côte à côte */
     }
 }
+.casque_panier{
+    border: black thin solid;
+}
 
+.casque_panier img{
+    float:left;
+}
+#panier{
+    display: flex; /* Ce conteneur est "flexible" */
+    justify-content: flex-start; /* Les éléments sont répartis équitablement sur la ligne */
+    margin-bottom: 45px; /* Marge inférieure */
+    flex-direction: column;
+}
+.nom_article {
+    text-transform : uppercase;  /* Mise en majuscules du texte */
+    font-family: 'Nordic'; /* Police de caractères */
+    font-size: x-large; /* Le texte est grossi en XL */
+    display: inline; /* Affichage à la ligne pour éviter la superposition avec le stock */
+    white-space: nowrap; /* Pas de passage à la ligne */
+    font-weight: bold; /* Texte en gras */
+}
+.modele_article {
+    text-transform : capitalize; /* Toutes les premières lettres en majuscules */
+}
+
+#total_panier{
+    border: red thin solid;
+    margin-bottom:45px;
+}
